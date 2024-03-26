@@ -6,9 +6,9 @@ import random
 TECH_LIST = ["Java", "C#", "Python", "JavaScript", "Rust", "Git", "SQL"]
 USERS_LIST =[]
 
-for i in range(1, 100):
+for i in range(1, 1000001):
   user = {
-      "id": i,
+      "userId": i,
       "name": f"name_{i}",  
       "surname": f"last_{i}",  
       "username": f"username_{i}",
