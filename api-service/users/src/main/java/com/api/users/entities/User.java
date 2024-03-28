@@ -4,6 +4,8 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.querydsl.core.annotations.QueryEntity;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,6 +15,7 @@ import lombok.NoArgsConstructor;
 @Document(collection = "users")
 @NoArgsConstructor
 @AllArgsConstructor
+@QueryEntity
 public class User {
 
     @Id
@@ -22,6 +25,6 @@ public class User {
     private String surname;
     private String username;
     private String email;
-    private boolean isAdmin;
+    private Boolean isAdmin;
     private List<String> techSkills;
 }
