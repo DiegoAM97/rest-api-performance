@@ -1,8 +1,8 @@
-from mongoengine import Document, StringField, IntField, BooleanField, EmailField, ListField
+from mongoengine import Document, StringField, IntField, BooleanField, EmailField, ListField, ObjectIdField
 
 class User(Document):
 
-    id = StringField(db_field="_id", primary_key=True)
+    id = ObjectIdField(db_field="_id", primary_key=True)
     user_id = IntField(db_field="userId")
     name = StringField()
     surname = StringField()
